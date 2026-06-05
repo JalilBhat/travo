@@ -15,7 +15,7 @@
     </a>
     <div class="nav-menu">
       @for (item of navItems; track item.href) {
-        <a [href]="item.href">{{ item.label }}</a>
+      <a [href]="item.href">{{ item.label }}</a>
       }
     </div>
     <a class="nav-cta" href="#contact">Book Now</a>
@@ -37,7 +37,7 @@
       </div>
       <ul class="hero-tags">
         @for (tag of heroHighlights; track tag) {
-          <li>{{ tag }}</li>
+        <li>{{ tag }}</li>
         }
       </ul>
     </div>
@@ -55,17 +55,13 @@
         <p>{{ about.body }}</p>
         <ul class="check-list">
           @for (item of about.bullets; track item) {
-            <li>{{ item }}</li>
+          <li>{{ item }}</li>
           }
         </ul>
         <a class="btn btn-primary" href="#contact">Plan Your Trip</a>
       </div>
       <div class="about-visual">
-        <img
-          src="https://images.unsplash.com/photo-1593292451253-dc57f4cd71df?auto=format&fit=crop&w=1200&q=80"
-          alt="Kashmir landscape"
-          loading="lazy"
-        />
+        <img src="../../src/assets/images/About-home.jpg" alt="Kashmir landscape" loading="lazy" />
         <div class="about-badge">
           <strong>11+</strong>
           <span>Years serving travelers</span>
@@ -74,18 +70,18 @@
     </div>
     <div class="wrap stats-grid stats-grid--inline">
       @for (stat of quickStats; track stat.label) {
-        <article>
-          <p class="stat-value">{{ stat.value }}</p>
-          <p class="stat-label">{{ stat.label }}</p>
-        </article>
+      <article>
+        <p class="stat-value">{{ stat.value }}</p>
+        <p class="stat-label">{{ stat.label }}</p>
+      </article>
       }
     </div>
     <div class="wrap why-grid why-grid--inline">
       @for (item of whyUs; track item.title) {
-        <article class="why-card">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.desc }}</p>
-        </article>
+      <article class="why-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+      </article>
       }
     </div>
   </section>
@@ -99,14 +95,14 @@
       </div>
       <div class="services-grid">
         @for (service of services; track service.title) {
-          <article class="service-tile">
-            <img [src]="service.image" [alt]="service.title" loading="lazy" />
-            <div class="service-tile__body">
-              <span class="service-tile__icon">{{ service.icon }}</span>
-              <h3>{{ service.title }}</h3>
-              <p>{{ service.desc }}</p>
-            </div>
-          </article>
+        <article class="service-tile">
+          <img [src]="service.image" [alt]="service.title" loading="lazy" />
+          <div class="service-tile__body">
+            <span class="service-tile__icon">{{ service.icon }}</span>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.desc }}</p>
+          </div>
+        </article>
         }
       </div>
     </div>
@@ -121,15 +117,15 @@
       </div>
       <div class="dest-grid">
         @for (place of highlights; track place.name) {
-          <article class="dest-card">
-            <img [src]="place.image" [alt]="place.name" loading="lazy" />
-            <div class="dest-card__overlay">
-              <span class="dest-tag">{{ place.tag }}</span>
-              <h3>{{ place.name }}</h3>
-              <p class="dest-meta">{{ place.info }}</p>
-              <p>{{ place.desc }}</p>
-            </div>
-          </article>
+        <article class="dest-card">
+          <img [src]="place.image" [alt]="place.name" loading="lazy" />
+          <div class="dest-card__overlay">
+            <span class="dest-tag">{{ place.tag }}</span>
+            <h3>{{ place.name }}</h3>
+            <p class="dest-meta">{{ place.info }}</p>
+            <p>{{ place.desc }}</p>
+          </div>
+        </article>
         }
       </div>
     </div>
@@ -144,34 +140,30 @@
       </div>
       <div class="filter-tabs">
         @for (category of packageCategories; track category) {
-          <button
-            type="button"
-            [class.is-active]="selectedCategory() === category"
-            (click)="setCategory(category)"
-          >
-            {{ category }}
-          </button>
+        <button type="button" [class.is-active]="selectedCategory() === category" (click)="setCategory(category)">
+          {{ category }}
+        </button>
         }
       </div>
       <div class="package-grid">
         @for (pack of getFilteredPackages(); track pack.name) {
-          <article class="package-card">
-            <img [src]="pack.image" [alt]="pack.name" loading="lazy" />
-            <div class="package-card__body">
-              <span class="package-badge">{{ pack.category }}</span>
-              <h3>{{ pack.name }}</h3>
-              <p class="package-days">{{ pack.days }}</p>
-              <ul>
-                @for (inc of pack.includes; track inc) {
-                  <li>{{ inc }}</li>
-                }
-              </ul>
-              <div class="package-footer">
-                <strong>{{ pack.price }}</strong>
-                <a [href]="getWhatsappUrl(false)" target="_blank" rel="noreferrer">Get Quote</a>
-              </div>
+        <article class="package-card">
+          <img [src]="pack.image" [alt]="pack.name" loading="lazy" />
+          <div class="package-card__body">
+            <span class="package-badge">{{ pack.category }}</span>
+            <h3>{{ pack.name }}</h3>
+            <p class="package-days">{{ pack.days }}</p>
+            <ul>
+              @for (inc of pack.includes; track inc) {
+              <li>{{ inc }}</li>
+              }
+            </ul>
+            <div class="package-footer">
+              <strong>{{ pack.price }}</strong>
+              <a [href]="getWhatsappUrl(false)" target="_blank" rel="noreferrer">Get Quote</a>
             </div>
-          </article>
+          </div>
+        </article>
         }
       </div>
     </div>
@@ -185,12 +177,12 @@
       </div>
       <div class="reviews-grid">
         @for (review of testimonials; track review.name) {
-          <article class="review-card">
-            <p class="stars">★★★★★</p>
-            <p class="quote">"{{ review.text }}"</p>
-            <p class="author">{{ review.name }}</p>
-            <p class="trip">{{ review.trip }}</p>
-          </article>
+        <article class="review-card">
+          <p class="stars">★★★★★</p>
+          <p class="quote">"{{ review.text }}"</p>
+          <p class="author">{{ review.name }}</p>
+          <p class="trip">{{ review.trip }}</p>
+        </article>
         }
       </div>
     </div>
@@ -204,7 +196,7 @@
       </div>
       <div class="gallery-mosaic">
         @for (photo of gallery; track photo; let i = $index) {
-          <img [src]="photo" alt="Kashmir gallery {{ i + 1 }}" loading="lazy" [class.span-2]="i === 0" />
+        <img [src]="photo" alt="Kashmir gallery {{ i + 1 }}" loading="lazy" [class.span-2]="i === 0" />
         }
       </div>
     </div>
@@ -218,10 +210,10 @@
       </div>
       <div class="faq-list">
         @for (item of faqs; track item.q) {
-          <article class="faq-item">
-            <h3>{{ item.q }}</h3>
-            <p>{{ item.a }}</p>
-          </article>
+        <article class="faq-item">
+          <h3>{{ item.q }}</h3>
+          <p>{{ item.a }}</p>
+        </article>
         }
       </div>
     </div>
@@ -235,15 +227,15 @@
       </div>
       <div class="blog-grid">
         @for (blog of blogs; track blog.title) {
-          <article class="blog-card">
-            <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
-            <div class="blog-card__body">
-              <p class="blog-meta">{{ blog.category }} · {{ blog.date }}</p>
-              <h3>{{ blog.title }}</h3>
-              <p>{{ blog.excerpt }}</p>
-              <a href="#contact">Read More</a>
-            </div>
-          </article>
+        <article class="blog-card">
+          <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
+          <div class="blog-card__body">
+            <p class="blog-meta">{{ blog.category }} · {{ blog.date }}</p>
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.excerpt }}</p>
+            <a href="#contact">Read More</a>
+          </div>
+        </article>
         }
       </div>
     </div>
@@ -265,10 +257,10 @@
         </a>
         <div class="contact-process">
           @for (step of process; track step.step) {
-            <article>
-              <span>{{ step.step }}</span>
-              <p><strong>{{ step.title }}</strong> — {{ step.desc }}</p>
-            </article>
+          <article>
+            <span>{{ step.step }}</span>
+            <p><strong>{{ step.title }}</strong> — {{ step.desc }}</p>
+          </article>
           }
         </div>
       </div>
@@ -306,14 +298,14 @@
       <p>Your trusted partner for Kashmir tour packages, stays, and transport.</p>
     </div>
     @for (col of footerColumns; track col.title) {
-      <div class="footer-col">
-        <h4>{{ col.title }}</h4>
-        <ul>
-          @for (link of col.links; track link) {
-            <li><a href="#contact">{{ link }}</a></li>
-          }
-        </ul>
-      </div>
+    <div class="footer-col">
+      <h4>{{ col.title }}</h4>
+      <ul>
+        @for (link of col.links; track link) {
+        <li><a href="#contact">{{ link }}</a></li>
+        }
+      </ul>
+    </div>
     }
     <div class="footer-col">
       <h4>Contact</h4>
