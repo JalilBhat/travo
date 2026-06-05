@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashmir Tourism - Discover Paradise</title>
+    <style>
+      :root {
+        --bg: #f5fbff;
+        --text: #1f2937;
+        --muted: #4b5563;
+        --brand: #0f766e;
+        --brand-dark: #115e59;
+        --card: #ffffff;
+        --line: #dbeafe;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+      .hero {
+        background: linear-gradient(rgba(15, 118, 110, 0.72), rgba(17, 94, 89, 0.72)),
+          url("https://images.unsplash.com/photo-1593292451253-dc57f4cd71df?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        color: #fff;
+        padding: 88px 20px;
+        text-align: center;
+      }
+      .hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.2rem); }
+      .hero p { max-width: 760px; margin: 0 auto; font-size: 1.05rem; }
+      .container { width: min(1100px, 92%); margin: 36px auto 64px; }
+      .section-title { font-size: 1.8rem; margin: 0 0 16px; color: var(--brand-dark); }
+      .intro, .card, .itinerary, .cta {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+      .intro, .itinerary, .cta { padding: 22px; }
+      .places {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card { padding: 18px; }
+      .card h3 { margin: 0 0 10px; color: var(--brand-dark); }
+      .meta { color: var(--muted); font-size: 0.95rem; }
+      .itinerary { margin-top: 30px; }
+      .itinerary ol { margin: 10px 0 0 18px; padding: 0; }
+      .itinerary li { margin: 8px 0; }
+      .cta { margin-top: 30px; text-align: center; }
+      .button {
+        display: inline-block;
+        margin-top: 8px;
+        text-decoration: none;
+        background: var(--brand);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .button:hover { background: var(--brand-dark); }
+      footer { text-align: center; color: var(--muted); padding: 20px; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Explore Kashmir Tourism</h1>
+      <p>
+        Witness snow-capped Himalayan views, serene lakes, colorful gardens, and warm Kashmiri hospitality
+        in one unforgettable journey.
+      </p>
+    </header>
+    <main class="container">
+      <section class="intro">
+        <h2 class="section-title">Why Visit Kashmir?</h2>
+        <p>
+          Often called <strong>Paradise on Earth</strong>, Kashmir offers a unique blend of natural beauty and
+          cultural charm. From the iconic Dal Lake houseboats to the meadows of Gulmarg and Pahalgam, every
+          destination feels postcard-perfect.
+        </p>
+      </section>
+      <section class="places">
+        <article class="card">
+          <h3>Srinagar</h3>
+          <p class="meta">Dal Lake | Mughal Gardens | Shikara Rides</p>
+          <p>Enjoy peaceful lake cruises, floating markets, and traditional Kashmiri cuisine.</p>
+        </article>
+        <article class="card">
+          <h3>Gulmarg</h3>
+          <p class="meta">Skiing | Gondola | Alpine Views</p>
+          <p>Ideal for winter sports and panoramic mountain scenery throughout the year.</p>
+        </article>
+        <article class="card">
+          <h3>Pahalgam</h3>
+          <p class="meta">Lidder Valley | Riverside Stays | Trekking</p>
+          <p>Perfect for nature lovers seeking quiet valleys, pine forests, and light adventure.</p>
+        </article>
+        <article class="card">
+          <h3>Sonamarg</h3>
+          <p class="meta">Glaciers | Scenic Drives | Meadow Trails</p>
+          <p>A beautiful base for mountain excursions and breathtaking photo opportunities.</p>
+        </article>
+      </section>
+      <section class="itinerary">
+        <h2 class="section-title">Suggested 4-Day Itinerary</h2>
+        <ol>
+          <li><strong>Day 1:</strong> Arrive in Srinagar, evening shikara ride on Dal Lake.</li>
+          <li><strong>Day 2:</strong> Day trip to Gulmarg, enjoy gondola and local sightseeing.</li>
+          <li><strong>Day 3:</strong> Visit Pahalgam valley and explore riverside spots.</li>
+          <li><strong>Day 4:</strong> Sonamarg excursion and departure from Srinagar.</li>
+        </ol>
+      </section>
+      <section class="cta">
+        <h2 class="section-title">Plan Your Kashmir Holiday</h2>
+        <p>Best seasons: March to May for spring blooms, and December to February for snowfall.</p>
+        <a class="button" href="mailto:travel@kashmirtourism.example">Book a Tour Inquiry</a>
+      </section>
+    </main>
+    <footer>Copyright 2026 Kashmir Tourism View</footer>
+  </body>
+</html>
