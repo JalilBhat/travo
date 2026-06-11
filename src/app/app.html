@@ -1,25 +1,28 @@
 <header class="site-header" id="home">
-  <div class="top-strip">
-    <span>📍 Srinagar, Jammu & Kashmir</span>
-    <span>{{ contactPhone }}</span>
-    <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+  <div class="header-sticky">
+    <div class="top-strip">
+      <span>📍 Srinagar, Jammu & Kashmir</span>
+      <span>{{ contactPhone }}</span>
+      <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+    </div>
+
+    <nav class="navbar">
+      <a class="brand" href="#home">
+        <span class="brand-mark">KT</span>
+        <span class="brand-text">
+          <strong>{{ brandName }}</strong>
+          <small>Kashmir Tour & Travel</small>
+        </span>
+      </a>
+      <div class="nav-menu">
+        @for (item of navItems; track item.href) {
+        <a [href]="item.href">{{ item.label }}</a>
+        }
+      </div>
+      <a class="nav-cta" href="#contact">Book Now</a>
+    </nav>
   </div>
 
-  <nav class="navbar">
-    <a class="brand" href="#home">
-      <span class="brand-mark">KT</span>
-      <span class="brand-text">
-        <strong>{{ brandName }}</strong>
-        <small>Kashmir Tour & Travel</small>
-      </span>
-    </a>
-    <div class="nav-menu">
-      @for (item of navItems; track item.href) {
-      <a [href]="item.href">{{ item.label }}</a>
-      }
-    </div>
-    <a class="nav-cta" href="#contact">Book Now</a>
-  </nav>
 
   <section class="hero">
     <div class="hero-inner">
