@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class App {
   protected readonly brandName = 'Kashmir Trails';
-  protected readonly whatsappNumber = '917006180286';
-  protected readonly contactEmail = 'i.jalil.ahmad@gmail.com';
-  protected readonly contactPhone = '+91 7006180286';
+  protected readonly whatsappNumber = '919541335766';
+  protected readonly contactEmail = 'daaettour@gmail.com';
+  protected readonly contactPhone = '+91 9541335766';
 
   protected readonly navItems = [
     { label: 'Home', href: '#home' },
