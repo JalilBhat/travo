@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,44 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.scss',
 })
 export class App {
+  constructor(
+    private meta: Meta,
+    private title: Title,
+  ) {}
+
   protected readonly brandName = 'Daaet Tour And Travel';
   protected readonly whatsappNumber = '919541335766';
   protected readonly contactEmail = 'daaettour@gmail.com';
   protected readonly contactPhone = '+91 9541335766';
+
+  ngOnInit(): void {
+    this.title.setTitle('Daaet Tour and Travel');
+
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Daaet Tour and Travel',
+    });
+
+    this.meta.updateTag({
+      property: 'og:description',
+      content: 'Explore Kashmir with customized tour packages.',
+    });
+
+    this.meta.updateTag({
+      property: 'og:image',
+      content: 'https://daaettour.in/assets/images/kashmir-banner.jpg',
+    });
+
+    this.meta.updateTag({
+      property: 'og:url',
+      content: 'https://daaettour.in',
+    });
+
+    this.meta.updateTag({
+      property: 'og:type',
+      content: 'website',
+    });
+  }
 
   protected readonly navItems = [
     { label: 'Home', href: '#home' },
