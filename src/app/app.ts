@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly brandName = 'Kashmir Trails';
+  protected readonly brandName = 'Daaet Tour And Travel';
   protected readonly whatsappNumber = '919541335766';
   protected readonly contactEmail = 'daaettour@gmail.com';
   protected readonly contactPhone = '+91 9541335766';
