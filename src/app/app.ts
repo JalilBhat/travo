@@ -135,48 +135,42 @@ export class App {
   protected readonly highlights = [
     {
       name: 'Srinagar',
-      image:
-        'https://images.unsplash.com/photo-1613553497126-a44624272024?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/dal_lake/dal_lake.jpg',
       info: 'Dal Lake · Mughal Gardens · Shikara',
       desc: 'Lake cruises, heritage gardens, and houseboat stays.',
       tag: 'Most Popular',
     },
     {
       name: 'Gulmarg',
-      image:
-        'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/gulmarg/gulmarg_2.jpg',
       info: 'Gondola · Skiing · Snow Views',
       desc: 'Winter sports and alpine scenery year-round.',
       tag: 'Adventure',
     },
     {
       name: 'Pahalgam',
-      image:
-        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/pahalgam/pahalgam_2.jpg',
       info: 'Lidder Valley · Riverside · Trekking',
       desc: 'Peaceful valleys, pine forests, and nature walks.',
       tag: 'Family',
     },
     {
       name: 'Sonamarg',
-      image:
-        'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/sonamarg/sonamarg_1.jpg',
       info: 'Meadows · Glaciers · Scenic Drives',
       desc: 'Golden meadows and high-altitude day trips.',
       tag: 'Scenic',
     },
     {
       name: 'Doodpathri',
-      image:
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/doodhpathri/doodhpathri_1.jpg',
       info: 'Meadows · Picnic · Day Trip',
       desc: 'Emerging meadow destination for relaxed outings.',
       tag: 'Day Tour',
     },
     {
       name: 'Mughal Gardens',
-      image:
-        'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/nishat_shalimar/nishat_1.jpg',
       info: 'Nishat · Shalimar · Heritage',
       desc: 'Classic garden circuits within Srinagar region.',
       tag: 'Culture',
