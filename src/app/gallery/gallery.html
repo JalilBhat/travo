@@ -1,0 +1,13 @@
+<section class="section" id="gallery">
+    <div class="wrap">
+        <div class="section-head section-head--center">
+            <p class="kicker">Gallery</p>
+            <h2>Kashmir Travel Moments</h2>
+        </div>
+        <div class="gallery-mosaic">
+            @for (photo of gallery; track photo; let i = $index) {
+            <img [src]="photo" alt="Kashmir gallery {{ i + 1 }}" loading="lazy" />
+            }
+        </div>
+    </div>
+</section>
