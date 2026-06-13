@@ -1,0 +1,26 @@
+<div class="header-sticky">
+    <div class="top-strip">
+        <span>📍 Srinagar, Jammu & Kashmir</span>
+        <span>{{ props.contactPhone }}</span>
+        <a [href]="'mailto:' +props.contactEmail">{{ props.contactEmail }}</a>
+    </div>
+
+    <nav class="navbar">
+        <a class="brand" href="#home">
+            <span class="brand-mark">
+                <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo"
+                    loading="lazy" />
+            </span>
+            <span class="brand-text">
+                <strong>{{ props.brandName }}</strong>
+                <small>Your Holiday Host</small>
+            </span>
+        </a>
+        <div class="nav-menu">
+            @for (item of navItems; track item.href) {
+            <a [href]="item.href">{{ item.label }}</a>
+            }
+        </div>
+        <a class="nav-cta" href="#contact">Book Now</a>
+    </nav>
+</div>

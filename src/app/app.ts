@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
 import { Gallery } from './gallery/gallery';
+import { NavHeader } from './nav-header/nav-header';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, Gallery],
+  imports: [FormsModule, Gallery, NavHeader],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -19,6 +20,7 @@ export class App {
   protected readonly whatsappNumber = '919541335766';
   protected readonly contactEmail = 'daaettour@gmail.com';
   protected readonly contactPhone = '+91 9541335766';
+  menuOpen = false;
 
   ngOnInit(): void {
     this.title.setTitle('Daaet Tour and Travel');
@@ -48,19 +50,6 @@ export class App {
       content: 'website',
     });
   }
-
-  protected readonly navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Destinations', href: '#destinations' },
-    { label: 'Packages', href: '#packages' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Blog', href: '#blogs' },
-    { label: 'Contact', href: '#contact' },
-  ];
 
   protected readonly inquiry = {
     name: '',

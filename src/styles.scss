@@ -1,4 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+:host {
+  --brand-950: #052e2b;
+  --brand-900: #0b3b38;
+  --brand-700: #0f766e;
+  --brand-500: #14b8a6;
+  --gold: #d4a853;
+  --gold-soft: #f5e6c8;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --surface-brand: #ecfdf5;
+  --ink: #0f172a;
+  --ink-muted: #64748b;
+  --line: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.08);
+
+  display: block;
+  color: var(--ink);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--surface-muted);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
 /*Sections */
 .section {
   padding: 4rem 0;

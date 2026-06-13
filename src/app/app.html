@@ -1,29 +1,6 @@
 <header class="site-header" id="home">
-  <div class="header-sticky">
-    <div class="top-strip">
-      <span>📍 Srinagar, Jammu & Kashmir</span>
-      <span>{{ contactPhone }}</span>
-      <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
-    </div>
-
-    <nav class="navbar">
-      <a class="brand" href="#home">
-        <span class="brand-mark">
-          <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo" loading="lazy" />
-        </span>
-        <span class="brand-text">
-          <strong>{{ brandName }}</strong>
-          <small>Your Holiday Host</small>
-        </span>
-      </a>
-      <div class="nav-menu">
-        @for (item of navItems; track item.href) {
-        <a [href]="item.href">{{ item.label }}</a>
-        }
-      </div>
-      <a class="nav-cta" href="#contact">Book Now</a>
-    </nav>
-  </div>
+  <app-nav-header
+    [props]="{brandName:brandName, whatsappNumber:whatsappNumber, contactEmail:contactEmail, contactPhone:contactPhone}"></app-nav-header>
 
 
   <section class="hero">
