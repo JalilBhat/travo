@@ -73,6 +73,7 @@ export class App {
 
   protected readonly heroHighlights = [
     'Kashmir Tour Packages',
+    'Ladakh Tour Packages',
     'Hotel & Houseboat Booking',
     'Cab & Airport Transfers',
     'Custom Itineraries',
@@ -92,7 +93,7 @@ export class App {
   protected readonly quickStats = [
     { label: 'Years Experience', value: '11+' },
     { label: 'Happy Travelers', value: '5,000+' },
-    { label: 'Destinations Covered', value: '25+' },
+    { label: 'Customer Satisfaction', value: '99%' },
     { label: 'Support', value: '24/7' },
   ];
 
@@ -213,7 +214,7 @@ export class App {
     },
   ];
 
-  protected readonly packageCategories = ['All', 'Family', 'Couple', 'Adventure'];
+  protected readonly packageCategories = ['All', 'Family', 'Couple', 'Adventure', 'Premium'];
   protected readonly selectedCategory = signal('All');
 
   protected readonly packages = [
@@ -270,6 +271,33 @@ export class App {
       image:
         'https://images.unsplash.com/photo-1613553497126-a44624272024?auto=format&fit=crop&w=900&q=80',
       includes: ['City highlights', 'Dal Lake experience', 'Airport pickup'],
+    },
+    {
+      name: 'Ladakh Bike Adventure',
+      days: '6 Nights / 7 Days',
+      price: 'From ₹29,999',
+      category: 'Adventure',
+      image:
+        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+      includes: ['Bike rental', 'Pangong Lake', 'Accommodation'],
+    },
+    {
+      name: 'Leh & Nubra Valley Escape',
+      days: '5 Nights / 6 Days',
+      price: 'From ₹26,999',
+      category: 'Family',
+      image:
+        'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
+      includes: ['Leh Palace', 'Diskit Monastery', 'Hotel + transport'],
+    },
+    {
+      name: 'Complete Ladakh Expedition',
+      days: '7 Nights / 8 Days',
+      price: 'From ₹34,999',
+      category: 'Premium',
+      image:
+        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
+      includes: ['Leh', 'Nubra Valley', 'Pangong Lake'],
     },
   ];
 
