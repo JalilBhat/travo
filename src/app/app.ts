@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { About } from './about/about';
 import { Blog } from './blog/blog';
 import { Contact } from './contact/contact';
@@ -12,6 +11,7 @@ import { NavHeader } from './nav-header/nav-header';
 import { Packages } from './packages/packages';
 import { Reviews } from './reviews/reviews';
 import { Services } from './services/services';
+import { SeoService } from './shared/seo.service';
 import { SITE } from './shared/site.constants';
 import { SiteFooter } from './site-footer/site-footer';
 
@@ -36,10 +36,7 @@ import { SiteFooter } from './site-footer/site-footer';
   styleUrl: './app.scss',
 })
 export class App implements OnInit {
-  constructor(
-    private meta: Meta,
-    private title: Title,
-  ) {}
+  constructor(private seo: SeoService) {}
 
   protected readonly companyInfo = {
     brandName: SITE.brandName,
@@ -49,31 +46,6 @@ export class App implements OnInit {
   };
 
   ngOnInit(): void {
-    this.title.setTitle('Daaet Tour and Travel');
-
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Daaet Tour and Travel',
-    });
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Explore Kashmir with customized tour packages.',
-    });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://daaettour.in/assets/images/kashmir-banner.jpg',
-    });
-
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://daaettour.in',
-    });
-
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website',
-    });
+    this.seo.applyHomePageSeo();
   }
 }

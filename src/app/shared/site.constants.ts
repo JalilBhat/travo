@@ -3,6 +3,29 @@ export const SITE = {
   whatsappNumber: '919541335766',
   contactEmail: 'daaettour@gmail.com',
   contactPhone: '+91 9541335766',
+  siteUrl: 'https://daaettour.in',
+  address: {
+    locality: 'Srinagar',
+    region: 'Jammu and Kashmir',
+    country: 'IN',
+    postalCode: '190001',
+  },
+} as const;
+
+export const SEO = {
+  title: 'Daaet Tour And Travel | Kashmir Tour Packages, Taxi & Cab Service',
+  description:
+    'Book Kashmir tour packages, Ladakh tours, Srinagar sightseeing, airport transfers, and reliable taxi and cab services with Daaet Tour And Travel.',
+  keywords:
+    'Kashmir tour packages, Kashmir travel agency, Gulmarg tour packages, Pahalgam packages, Sonamarg travel, Kashmir honeymoon packages, Srinagar tourism, Ladakh tour packages, Kashmir cab service, houseboat booking Kashmir',
+  ogImage: `${SITE.siteUrl}/assets/images/logo_3.png`,
+  locale: 'en_IN',
+  twitterHandle: '@daaettour',
+  geo: {
+    region: 'IN-JK',
+    placename: 'Srinagar, Jammu and Kashmir, India',
+    position: '34.0837;74.7973',
+  },
 } as const;
 
 export const HERO_HIGHLIGHTS = [
