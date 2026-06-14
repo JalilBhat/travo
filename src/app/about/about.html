@@ -1,0 +1,39 @@
+<section class="section section--light" id="about">
+  <div class="wrap about-layout">
+    <div class="section-head">
+      <p class="kicker">About Us</p>
+      <h2>{{ about.title }}</h2>
+      <p class="lead">{{ about.lead }}</p>
+      <p>{{ about.body }}</p>
+      <ul class="check-list">
+        @for (item of about.bullets; track item) {
+        <li>{{ item }}</li>
+        }
+      </ul>
+      <a class="btn btn-primary" href="#contact">Plan Your Trip</a>
+    </div>
+    <div class="about-visual">
+      <img src="assets/images/About-home.jpg" alt="Kashmir landscape" loading="lazy" />
+      <div class="about-badge">
+        <strong>11+</strong>
+        <span>Years serving travelers</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap stats-grid stats-grid--inline">
+    @for (stat of quickStats; track stat.label) {
+    <article>
+      <p class="stat-value">{{ stat.value }}</p>
+      <p class="stat-label">{{ stat.label }}</p>
+    </article>
+    }
+  </div>
+  <div class="wrap why-grid why-grid--inline">
+    @for (item of whyUs; track item.title) {
+    <article class="why-card">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.desc }}</p>
+    </article>
+    }
+  </div>
+</section>

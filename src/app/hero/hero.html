@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Best Travel Agency in Kashmir</p>
+    <h1>Discover Kashmir With Trusted Local Experts</h1>
+    <p class="hero-lead">
+      Tour packages, hotel bookings, cab services, and custom itineraries — planned end-to-end for
+      families, couples, and adventure travelers.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#packages">Explore Packages</a>
+      <a class="btn btn-outline" [href]="whatsappUrl" target="_blank" rel="noreferrer">
+        WhatsApp Us
+      </a>
+    </div>
+    <ul class="hero-tags">
+      @for (tag of heroHighlights; track tag) {
+      <li>{{ tag }}</li>
+      }
+    </ul>
+  </div>
+</section>

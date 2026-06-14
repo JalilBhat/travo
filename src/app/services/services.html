@@ -1,0 +1,21 @@
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="kicker">Our Services</p>
+      <h2>Everything you need for Kashmir and Ladakh Trip</h2>
+      <p class="lead">Complete travel solutions under one trusted brand — from planning to on-trip support.</p>
+    </div>
+    <div class="services-grid">
+      @for (service of services; track service.title) {
+      <article class="service-tile">
+        <img [src]="service.image" [alt]="service.title" loading="lazy" />
+        <div class="service-tile__body">
+          <span class="service-tile__icon">{{ service.icon }}</span>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

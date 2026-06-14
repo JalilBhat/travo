@@ -1,0 +1,37 @@
+<section class="section" id="packages">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="kicker">Tour Packages</p>
+      <h2>Kashmir and Ladakh Holiday Packages</h2>
+      <p class="lead">Flexible plans for family holidays, romantic getaways, and snow adventures.</p>
+    </div>
+    <div class="filter-tabs">
+      @for (category of packageCategories; track category) {
+      <button type="button" [class.is-active]="selectedCategory() === category" (click)="setCategory(category)">
+        {{ category }}
+      </button>
+      }
+    </div>
+    <div class="package-grid">
+      @for (pack of getFilteredPackages(); track pack.name) {
+      <article class="package-card">
+        <img [src]="pack.image" [alt]="pack.name" loading="lazy" />
+        <div class="package-card__body">
+          <span class="package-badge">{{ pack.category }}</span>
+          <h3>{{ pack.name }}</h3>
+          <p class="package-days">{{ pack.days }}</p>
+          <ul>
+            @for (inc of pack.includes; track inc) {
+            <li>{{ inc }}</li>
+            }
+          </ul>
+          <div class="package-footer">
+            <strong>{{ pack.price }}</strong>
+            <a [href]="whatsappUrl" target="_blank" rel="noreferrer">Get Quote</a>
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

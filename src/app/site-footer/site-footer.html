@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#home">
+        <span class="brand-mark">
+          <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo" loading="lazy" />
+        </span>
+        <span class="brand-text">
+          <strong>{{ site.brandName }}</strong>
+          <small>Your Holiday Host</small>
+        </span>
+      </a>
+      <p>Your trusted partner for Kashmir tour packages, stays, and transport.</p>
+    </div>
+    @for (col of footerColumns; track col.title) {
+    <div class="footer-col">
+      <h4>{{ col.title }}</h4>
+      <ul>
+        @for (link of col.links; track link) {
+        <li><a href="#contact">{{ link }}</a></li>
+        }
+      </ul>
+    </div>
+    }
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>{{ site.contactPhone }}</li>
+        <li>{{ site.contactEmail }}</li>
+        <li>Srinagar, J&K</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 {{ site.brandName }}. All rights reserved. Original content and branding owned by {{ site.brandName }}.</p>
+  </div>
+</footer>

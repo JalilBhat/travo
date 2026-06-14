@@ -1,0 +1,21 @@
+<section class="section section--light" id="blogs">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="kicker">Blog</p>
+      <h2>Latest Travel Guides</h2>
+    </div>
+    <div class="blog-grid">
+      @for (blog of blogs; track blog.title) {
+      <article class="blog-card">
+        <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
+        <div class="blog-card__body">
+          <p class="blog-meta">{{ blog.category }} · {{ blog.date }}</p>
+          <h3>{{ blog.title }}</h3>
+          <p>{{ blog.excerpt }}</p>
+          <a href="#contact">Read More</a>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

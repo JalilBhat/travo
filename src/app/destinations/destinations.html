@@ -1,0 +1,22 @@
+<section class="section section--light" id="destinations">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="kicker">Destinations</p>
+      <h2>Popular Places in Kashmir</h2>
+      <p class="lead">Explore lakes, gardens, meadows, and mountain towns with curated day plans.</p>
+    </div>
+    <div class="dest-grid">
+      @for (place of highlights; track place.name) {
+      <article class="dest-card">
+        <img [src]="place.image" [alt]="place.name" loading="lazy" />
+        <div class="dest-card__overlay">
+          <span class="dest-tag">{{ place.tag }}</span>
+          <h3>{{ place.name }}</h3>
+          <p class="dest-meta">{{ place.info }}</p>
+          <p>{{ place.desc }}</p>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

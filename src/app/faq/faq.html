@@ -1,0 +1,16 @@
+<section class="section section--muted" id="faq">
+  <div class="wrap faq-layout">
+    <div class="section-head">
+      <p class="kicker">FAQ</p>
+      <h2>Travel Questions Answered</h2>
+    </div>
+    <div class="faq-list">
+      @for (item of faqs; track item.q) {
+      <article class="faq-item">
+        <h3>{{ item.q }}</h3>
+        <p>{{ item.a }}</p>
+      </article>
+      }
+    </div>
+  </div>
+</section>

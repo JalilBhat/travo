@@ -1,0 +1,42 @@
+<section class="section contact-section" id="contact">
+  <div class="wrap contact-layout">
+    <div class="contact-info">
+      <p class="kicker kicker--light">Contact Us</p>
+      <h2>Book Your Kashmir Trip Today</h2>
+      <p>Reach our travel desk for packages, hotel booking, cab rental, and custom itineraries.</p>
+      <ul class="contact-list">
+        <li><strong>Phone:</strong> {{ site.contactPhone }}</li>
+        <li><strong>Email:</strong> {{ site.contactEmail }}</li>
+        <li><strong>Location:</strong> Srinagar, Jammu & Kashmir</li>
+      </ul>
+      <a class="btn btn-whatsapp" [href]="whatsappUrl" target="_blank" rel="noreferrer">
+        Chat on WhatsApp
+      </a>
+      <div class="contact-process">
+        @for (step of process; track step.step) {
+        <article>
+          <span>{{ step.step }}</span>
+          <p><strong>{{ step.title }}</strong> — {{ step.desc }}</p>
+        </article>
+        }
+      </div>
+    </div>
+    <form class="contact-form" #inquiryForm="ngForm" (ngSubmit)="submitInquiry()">
+      <h3>Quick Enquiry Form</h3>
+      <input type="text" name="name" placeholder="Your Name" [(ngModel)]="inquiry.name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" [(ngModel)]="inquiry.phone" required />
+      <select name="category" [(ngModel)]="inquiry.category" required>
+        <option value="Family Trip">Family Trip</option>
+        <option value="Couple Trip">Couple Trip</option>
+        <option value="Honeymoon">Honeymoon</option>
+        <option value="Adventure Tour">Adventure Tour</option>
+      </select>
+      <input type="text" name="month" placeholder="Travel Month" [(ngModel)]="inquiry.month" />
+      <input type="number" name="travelers" placeholder="No. of Travelers" [(ngModel)]="inquiry.travelers" />
+      <textarea name="notes" rows="3" placeholder="Trip notes (optional)" [(ngModel)]="inquiry.notes"></textarea>
+      <button type="submit" class="btn btn-primary" [disabled]="inquiryForm.invalid">
+        Send on WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
