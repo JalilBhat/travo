@@ -8,9 +8,9 @@
     <div class="services-grid">
       @for (service of services; track service.title) {
       <article class="service-tile">
-        <img [src]="service.image" [alt]="service.title" loading="lazy" />
+        <img [src]="service.image" [alt]="service.title" width="400" height="140" loading="lazy" decoding="async" />
         <div class="service-tile__body">
-          <span class="service-tile__icon">{{ service.icon }}</span>
+          <span class="service-tile__icon" aria-hidden="true">{{ service.icon }}</span>
           <h3>{{ service.title }}</h3>
           <p>{{ service.desc }}</p>
         </div>

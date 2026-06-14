@@ -7,7 +7,7 @@
     <div class="blog-grid">
       @for (blog of blogs; track blog.title) {
       <article class="blog-card">
-        <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
+        <img [src]="blog.image" [alt]="blog.title" width="400" height="190" loading="lazy" decoding="async" />
         <div class="blog-card__body">
           <p class="blog-meta">{{ blog.category }} · {{ blog.date }}</p>
           <h3>{{ blog.title }}</h3>

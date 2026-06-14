@@ -1,4 +1,14 @@
 <section class="hero">
+  <img
+    class="hero-bg"
+    [src]="heroBg"
+    alt=""
+    width="1200"
+    height="675"
+    fetchpriority="high"
+    decoding="async"
+  />
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <p class="eyebrow">Best Travel Agency in Kashmir</p>
     <h1>Discover Kashmir With Trusted Local Experts</h1>
@@ -8,7 +18,13 @@
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#packages">Explore Packages</a>
-      <a class="btn btn-outline" [href]="whatsappUrl" target="_blank" rel="noreferrer">
+      <a
+        class="btn btn-outline"
+        [href]="whatsappUrl"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="WhatsApp Us (opens in new tab)"
+      >
         WhatsApp Us
       </a>
     </div>

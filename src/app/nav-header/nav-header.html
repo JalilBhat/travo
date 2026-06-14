@@ -1,6 +1,6 @@
 <div class="header-sticky" [class.menu-open]="menuOpen()">
   <div class="top-strip">
-    <span class="top-strip__location">📍 Srinagar, Jammu & Kashmir</span>
+    <span class="top-strip__location"><span aria-hidden="true">📍</span> Srinagar, Jammu & Kashmir</span>
     <a class="top-strip__phone" [href]="'tel:' + props.contactPhone">{{ props.contactPhone }}</a>
     <a class="top-strip__email" [href]="'mailto:' + props.contactEmail">{{ props.contactEmail }}</a>
   </div>
@@ -8,7 +8,14 @@
   <nav class="navbar" aria-label="Main navigation">
     <a class="brand" href="#home" (click)="closeMenu()">
       <span class="brand-mark">
-        <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo" loading="lazy" />
+        <img
+          class="logo-image"
+          src="assets/images/logo_3.png"
+          alt=""
+          width="60"
+          height="60"
+          fetchpriority="high"
+        />
       </span>
       <span class="brand-text">
         <strong>{{ props.brandName }}</strong>
@@ -29,7 +36,7 @@
       <span class="nav-toggle-bar"></span>
     </button>
 
-    <div class="nav-menu" id="mobile-nav" [class.is-open]="menuOpen()">
+    <div class="nav-menu" id="mobile-nav" [class.is-open]="menuOpen()" [attr.inert]="menuInert() ? '' : null">
       @for (item of navItems; track item.href) {
       <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
       }

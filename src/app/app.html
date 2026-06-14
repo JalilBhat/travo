@@ -1,18 +1,45 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header class="site-header" id="home">
   <app-nav-header [props]="companyInfo"></app-nav-header>
   <app-hero></app-hero>
 </header>
 
-<main>
+<main id="main-content">
   <app-about></app-about>
   <app-services></app-services>
   <app-destinations></app-destinations>
   <app-packages></app-packages>
-  <app-reviews></app-reviews>
-  <app-gallery></app-gallery>
-  <app-faq></app-faq>
-  <app-blog></app-blog>
-  <app-contact></app-contact>
+
+  @defer (on viewport) {
+    <app-reviews></app-reviews>
+  } @placeholder {
+    <div class="section-placeholder" aria-hidden="true"></div>
+  }
+
+  @defer (on viewport) {
+    <app-gallery></app-gallery>
+  } @placeholder {
+    <div class="section-placeholder" aria-hidden="true"></div>
+  }
+
+  @defer (on viewport) {
+    <app-faq></app-faq>
+  } @placeholder {
+    <div class="section-placeholder" aria-hidden="true"></div>
+  }
+
+  @defer (on viewport) {
+    <app-blog></app-blog>
+  } @placeholder {
+    <div class="section-placeholder" aria-hidden="true"></div>
+  }
+
+  @defer (on viewport) {
+    <app-contact></app-contact>
+  } @placeholder {
+    <div class="section-placeholder" aria-hidden="true"></div>
+  }
 </main>
 
 <app-site-footer></app-site-footer>

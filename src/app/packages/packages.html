@@ -5,9 +5,16 @@
       <h2>Kashmir and Ladakh Holiday Packages</h2>
       <p class="lead">Flexible plans for family holidays, romantic getaways, and snow adventures.</p>
     </div>
-    <div class="filter-tabs">
+    <div class="filter-tabs" role="tablist" aria-label="Filter tour packages">
       @for (category of packageCategories; track category) {
-      <button type="button" [class.is-active]="selectedCategory() === category" (click)="setCategory(category)">
+      <button
+        type="button"
+        role="tab"
+        [class.is-active]="selectedCategory() === category"
+        [attr.aria-selected]="selectedCategory() === category"
+        [attr.aria-pressed]="selectedCategory() === category"
+        (click)="setCategory(category)"
+      >
         {{ category }}
       </button>
       }
@@ -15,7 +22,7 @@
     <div class="package-grid">
       @for (pack of getFilteredPackages(); track pack.name) {
       <article class="package-card">
-        <img [src]="pack.image" [alt]="pack.name" loading="lazy" />
+        <img [src]="pack.image" [alt]="pack.name" width="400" height="200" loading="lazy" decoding="async" />
         <div class="package-card__body">
           <span class="package-badge">{{ pack.category }}</span>
           <h3>{{ pack.name }}</h3>
@@ -27,7 +34,7 @@
           </ul>
           <div class="package-footer">
             <strong>{{ pack.price }}</strong>
-            <a [href]="whatsappUrl" target="_blank" rel="noreferrer">Get Quote</a>
+            <a [href]="whatsappUrl" target="_blank" rel="noreferrer" aria-label="Get quote for {{ pack.name }} (opens in new tab)">Get Quote</a>
           </div>
         </div>
       </article>

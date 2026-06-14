@@ -15,6 +15,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 0.88rem;
+  min-height: 44px;
 }
 
 .filter-tabs button.is-active {
@@ -59,7 +60,7 @@
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   background: var(--surface-brand);
-  color: var(--brand-700);
+  color: var(--brand-900);
   margin-bottom: 0.5rem;
 }
 
@@ -135,7 +136,6 @@
 
   .filter-tabs button {
     flex-shrink: 0;
-    min-height: 40px;
   }
 
   .package-grid {

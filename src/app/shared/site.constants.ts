@@ -28,6 +28,9 @@ export const SEO = {
   },
 } as const;
 
+export const HERO_BG =
+  'https://images.unsplash.com/photo-1593292451253-dc57f4cd71df?auto=format&fit=crop&w=1200&fm=webp&q=75';
+
 export const HERO_HIGHLIGHTS = [
   'Kashmir Tour Packages',
   'Ladakh Tour Packages',
@@ -66,49 +69,49 @@ export const SERVICES = [
     title: 'Tour Packages',
     desc: 'Curated multi-day Kashmir itineraries for every travel style.',
     icon: '🧭',
-    image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Hotel Bookings',
     desc: 'Budget to luxury stays including iconic Dal Lake houseboats.',
     icon: '🏨',
-    image: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Cab Services',
     desc: 'Airport transfers and full-day sightseeing with local drivers.',
     icon: '🚕',
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Flight Assistance',
     desc: 'Route planning and booking guidance aligned with your trip dates.',
     icon: '✈️',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Honeymoon Tours',
     desc: 'Romantic packages with private experiences and premium stays.',
     icon: '💍',
-    image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Adventure & Trekking',
     desc: 'Gulmarg gondola, snow activities, and guided valley excursions.',
     icon: '🏔️',
-    image: 'https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: 'Group & Corporate',
     desc: 'Structured plans for families, teams, and student batches.',
     icon: '👥',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
   {
     title: '24/7 Travel Desk',
     desc: 'Continuous help before, during, and after your Kashmir trip.',
     icon: '📞',
-    image: 'https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=400&fm=webp&q=75',
   },
 ];
 
@@ -165,7 +168,7 @@ export const PACKAGES = [
     days: '4 Nights / 5 Days',
     price: 'From ₹18,999',
     category: 'Family',
-    image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Srinagar stay', 'Gulmarg day trip', 'Cab & sightseeing'],
   },
   {
@@ -173,7 +176,7 @@ export const PACKAGES = [
     days: '5 Nights / 6 Days',
     price: 'From ₹24,499',
     category: 'Couple',
-    image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Pahalgam visit', 'Houseboat night', 'Private transfers'],
   },
   {
@@ -181,7 +184,7 @@ export const PACKAGES = [
     days: '3 Nights / 4 Days',
     price: 'From ₹16,499',
     category: 'Adventure',
-    image: 'https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Gondola experience', 'Winter activities', 'Hotel + cab'],
   },
   {
@@ -189,7 +192,7 @@ export const PACKAGES = [
     days: '5 Nights / 6 Days',
     price: 'From ₹28,999',
     category: 'Couple',
-    image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Romantic add-ons', 'Premium stay options', 'Shikara evening'],
   },
   {
@@ -197,7 +200,7 @@ export const PACKAGES = [
     days: '6 Nights / 7 Days',
     price: 'From ₹31,999',
     category: 'Family',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Multi-destination route', 'Kid-friendly pacing', 'Full transport'],
   },
   {
@@ -205,7 +208,7 @@ export const PACKAGES = [
     days: '2 Nights / 3 Days',
     price: 'From ₹12,999',
     category: 'Couple',
-    image: 'https://images.unsplash.com/photo-1613553497126-a44624272024?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1613553497126-a44624272024?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['City highlights', 'Dal Lake experience', 'Airport pickup'],
   },
   {
@@ -213,7 +216,7 @@ export const PACKAGES = [
     days: '6 Nights / 7 Days',
     price: 'From ₹29,999',
     category: 'Adventure',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Bike rental', 'Pangong Lake', 'Accommodation'],
   },
   {
@@ -221,7 +224,7 @@ export const PACKAGES = [
     days: '5 Nights / 6 Days',
     price: 'From ₹26,999',
     category: 'Family',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Leh Palace', 'Diskit Monastery', 'Hotel + transport'],
   },
   {
@@ -229,7 +232,7 @@ export const PACKAGES = [
     days: '7 Nights / 8 Days',
     price: 'From ₹34,999',
     category: 'Premium',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&fm=webp&q=75',
     includes: ['Leh', 'Nubra Valley', 'Pangong Lake'],
   },
 ];
@@ -279,21 +282,21 @@ export const BLOGS = [
     title: 'Top Places to Visit in Kashmir',
     category: 'Travel Guide',
     date: 'May 2026',
-    image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&fm=webp&q=75',
     excerpt: 'Must-visit lakes, gardens, meadows, and mountain towns for first-time travelers.',
   },
   {
     title: 'Best Time for Gulmarg Snow Trip',
     category: 'Seasonal',
     date: 'Apr 2026',
-    image: 'https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=600&fm=webp&q=75',
     excerpt: 'Weather windows, clothing tips, and activity planning for winter holidays.',
   },
   {
     title: 'How to Plan a Kashmir Budget Trip',
     category: 'Planning',
     date: 'Mar 2026',
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&fm=webp&q=75',
     excerpt: 'Practical ways to manage cost without missing core experiences.',
   },
 ];

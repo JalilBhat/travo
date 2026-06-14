@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Input, PLATFORM_ID, inject, signal } from '@angular/core';
+import { Component, HostListener, Input, OnInit, PLATFORM_ID, inject, signal } from '@angular/core';
 
 interface CompanyInfo {
   brandName: string;
@@ -14,7 +14,7 @@ interface CompanyInfo {
   templateUrl: './nav-header.html',
   styleUrl: './nav-header.scss',
 })
-export class NavHeader {
+export class NavHeader implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
 
   @Input() props: CompanyInfo = {
@@ -38,6 +38,21 @@ export class NavHeader {
   ];
 
   protected readonly menuOpen = signal(false);
+  protected readonly mobileNav = signal(false);
+
+  ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId) || typeof window.matchMedia !== 'function') return;
+
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
+    const syncViewport = () => this.mobileNav.set(mediaQuery.matches);
+
+    syncViewport();
+    mediaQuery.addEventListener('change', syncViewport);
+  }
+
+  protected menuInert(): boolean {
+    return this.mobileNav() && !this.menuOpen();
+  }
 
   protected toggleMenu(): void {
     this.menuOpen.update((open) => !open);

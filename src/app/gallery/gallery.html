@@ -12,7 +12,7 @@
         <div class="gallery-mosaic">
             @for (photo of gallery; track photo; let i = $index) {
             <div class="gallery-item">
-                <img [src]="photo" alt="Kashmir gallery {{ i + 1 }}" loading="lazy" />
+                <img [src]="photo" alt="Kashmir gallery {{ i + 1 }}" width="400" height="300" loading="lazy" decoding="async" />
             </div>
             }
         </div>

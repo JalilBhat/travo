@@ -1,12 +1,28 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: calc(var(--header-height, 108px) + 2rem) 1rem 4rem;
-  background:
-    linear-gradient(105deg, rgba(5, 46, 43, 0.92), rgba(15, 118, 110, 0.78)),
-    url('https://images.unsplash.com/photo-1593292451253-dc57f4cd71df?auto=format&fit=crop&w=1800&q=80')
-      center / cover no-repeat;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, rgba(5, 46, 43, 0.92), rgba(15, 118, 110, 0.78));
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 2;
   width: min(820px, 94%);
   margin: 0 auto;
   text-align: center;
@@ -58,8 +74,9 @@ h1 {
   font-size: 0.78rem;
   padding: 0.28rem 0.65rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(5, 46, 43, 0.75);
+  color: #fff;
 }
 
 @media (max-width: 768px) {

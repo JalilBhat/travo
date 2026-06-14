@@ -2,17 +2,6 @@
 <html lang="en">
 
 <head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF6DQ9NM05"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-HF6DQ9NM05');
-  </script>
-
   <meta charset="utf-8">
 
   <title>Daaet Tour And Travel | Kashmir Tour Packages, Taxi & Cab Service</title>
@@ -21,6 +10,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b3d2e">
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link
+    rel="preload"
+    as="image"
+    href="https://images.unsplash.com/photo-1593292451253-dc57f4cd71df?auto=format&fit=crop&w=1200&fm=webp&q=75"
+    fetchpriority="high"
+  >
 
   <!-- SEO -->
   <meta name="description"
@@ -66,6 +63,20 @@
 
 <body>
   <app-root></app-root>
+
+  <script>
+    window.addEventListener('load', function () {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HF6DQ9NM05';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-HF6DQ9NM05');
+    });
+  </script>
 </body>
 
 </html>
