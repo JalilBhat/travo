@@ -33,6 +33,16 @@ a {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 /*Sections */
 .section {
   padding: 4rem 0;
@@ -142,4 +152,49 @@ a {
 .btn-whatsapp {
   background: #22c55e;
   color: #fff;
+}
+
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 92px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 84px;
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .wrap {
+    width: min(1180px, 94%);
+  }
+
+  .section-head--center {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.45rem, 5vw, 1.9rem);
+  }
+
+  .lead {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.25rem 0;
+  }
 }

@@ -15,3 +15,12 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
   z-index: 50;
 }
+
+@media (max-width: 768px) {
+  .float-wa {
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    width: 48px;
+    height: 48px;
+  }
+}

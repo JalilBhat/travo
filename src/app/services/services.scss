@@ -47,6 +47,12 @@
   line-height: 1.5;
 }
 
+@media (max-width: 640px) {
+  .service-tile img {
+    height: 160px;
+  }
+}
+
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);

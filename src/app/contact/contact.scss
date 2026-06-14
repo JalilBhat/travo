@@ -84,6 +84,17 @@
   border-radius: 10px;
   padding: 0.68rem 0.75rem;
   font: inherit;
+  width: 100%;
+  min-height: 44px;
+}
+
+.contact-form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
 }
 
 .contact-form button:disabled {
@@ -94,5 +105,9 @@
 @media (max-width: 768px) {
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info .btn {
+    width: 100%;
   }
 }

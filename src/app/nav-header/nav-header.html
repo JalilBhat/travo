@@ -1,26 +1,45 @@
-<div class="header-sticky">
-    <div class="top-strip">
-        <span>📍 Srinagar, Jammu & Kashmir</span>
-        <span>{{ props.contactPhone }}</span>
-        <a [href]="'mailto:' +props.contactEmail">{{ props.contactEmail }}</a>
+<div class="header-sticky" [class.menu-open]="menuOpen()">
+  <div class="top-strip">
+    <span class="top-strip__location">📍 Srinagar, Jammu & Kashmir</span>
+    <a class="top-strip__phone" [href]="'tel:' + props.contactPhone">{{ props.contactPhone }}</a>
+    <a class="top-strip__email" [href]="'mailto:' + props.contactEmail">{{ props.contactEmail }}</a>
+  </div>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="#home" (click)="closeMenu()">
+      <span class="brand-mark">
+        <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo" loading="lazy" />
+      </span>
+      <span class="brand-text">
+        <strong>{{ props.brandName }}</strong>
+        <small>Your Holiday Host</small>
+      </span>
+    </a>
+
+    <button
+      type="button"
+      class="nav-toggle"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-nav"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()"
+    >
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <div class="nav-menu" id="mobile-nav" [class.is-open]="menuOpen()">
+      @for (item of navItems; track item.href) {
+      <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+      }
+      <a class="nav-cta nav-cta--mobile" href="#contact" (click)="closeMenu()">Book Now</a>
     </div>
 
-    <nav class="navbar">
-        <a class="brand" href="#home">
-            <span class="brand-mark">
-                <img class="logo-image" src="assets/images/logo_3.png" alt="Daaet Tour And Travel Logo"
-                    loading="lazy" />
-            </span>
-            <span class="brand-text">
-                <strong>{{ props.brandName }}</strong>
-                <small>Your Holiday Host</small>
-            </span>
-        </a>
-        <div class="nav-menu">
-            @for (item of navItems; track item.href) {
-            <a [href]="item.href">{{ item.label }}</a>
-            }
-        </div>
-        <a class="nav-cta" href="#contact">Book Now</a>
-    </nav>
+    <a class="nav-cta nav-cta--desktop" href="#contact">Book Now</a>
+  </nav>
+
+  @if (menuOpen()) {
+  <button type="button" class="nav-backdrop" aria-label="Close menu" (click)="closeMenu()"></button>
+  }
 </div>

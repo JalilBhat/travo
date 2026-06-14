@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Input, PLATFORM_ID, inject, signal } from '@angular/core';
 
 interface CompanyInfo {
   brandName: string;
@@ -14,12 +15,15 @@ interface CompanyInfo {
   styleUrl: './nav-header.scss',
 })
 export class NavHeader {
+  private readonly platformId = inject(PLATFORM_ID);
+
   @Input() props: CompanyInfo = {
     brandName: '',
     whatsappNumber: '',
     contactEmail: '',
     contactPhone: '',
   };
+
   protected readonly navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
@@ -32,4 +36,33 @@ export class NavHeader {
     { label: 'Blog', href: '#blogs' },
     { label: 'Contact', href: '#contact' },
   ];
+
+  protected readonly menuOpen = signal(false);
+
+  protected toggleMenu(): void {
+    this.menuOpen.update((open) => !open);
+    this.syncBodyScroll();
+  }
+
+  protected closeMenu(): void {
+    this.menuOpen.set(false);
+    this.syncBodyScroll();
+  }
+
+  @HostListener('document:keydown.escape')
+  protected onEscape(): void {
+    this.closeMenu();
+  }
+
+  @HostListener('window:resize')
+  protected onResize(): void {
+    if (this.menuOpen() && typeof window !== 'undefined' && window.innerWidth > 1024) {
+      this.closeMenu();
+    }
+  }
+
+  private syncBodyScroll(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    document.body.style.overflow = this.menuOpen() ? 'hidden' : '';
+  }
 }

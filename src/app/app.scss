@@ -9,4 +9,17 @@
 .site-header {
   color: #fff;
   background: var(--brand-950);
+  --header-height: 108px;
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    --header-height: 92px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    --header-height: 84px;
+  }
 }

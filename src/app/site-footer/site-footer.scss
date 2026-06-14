@@ -78,5 +78,10 @@
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-brand p {
+    max-width: none;
   }
 }

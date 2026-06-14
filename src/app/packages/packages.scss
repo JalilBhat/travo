@@ -106,6 +106,9 @@
   font-weight: 700;
   color: var(--brand-900);
   font-size: 0.88rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -115,6 +118,26 @@
 }
 
 @media (max-width: 768px) {
+  .filter-tabs {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.35rem;
+    margin-inline: -0.25rem;
+    padding-inline: 0.25rem;
+  }
+
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tabs button {
+    flex-shrink: 0;
+    min-height: 40px;
+  }
+
   .package-grid {
     grid-template-columns: 1fr;
   }

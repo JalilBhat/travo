@@ -13,6 +13,17 @@
   box-shadow: var(--shadow-sm);
 }
 
+@media (max-width: 768px) {
+  .dest-card {
+    min-height: 240px;
+    max-height: none;
+  }
+
+  .dest-card img {
+    min-height: 240px;
+  }
+}
+
 .dest-card img {
   width: 100%;
   height: 100%;
