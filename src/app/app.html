@@ -11,35 +11,46 @@
   <app-destinations></app-destinations>
   <app-packages></app-packages>
 
-  @defer (on viewport) {
+  <div id="reviews">
+    @defer (on viewport) {
     <app-reviews></app-reviews>
-  } @placeholder {
+    } @placeholder {
     <div class="section-placeholder" aria-hidden="true"></div>
-  }
+    }
+  </div>
 
-  @defer (on viewport) {
+  <div id="gallery">
+    @defer (on viewport) {
     <app-gallery></app-gallery>
-  } @placeholder {
+    } @placeholder {
     <div class="section-placeholder" aria-hidden="true"></div>
-  }
+    }
+  </div>
 
-  @defer (on viewport) {
+  <div id="faq">
+    @defer (on viewport) {
     <app-faq></app-faq>
-  } @placeholder {
+    } @placeholder {
     <div class="section-placeholder" aria-hidden="true"></div>
-  }
+    }
+  </div>
 
-  @defer (on viewport) {
+  <div id="blogs">
+    @defer (on viewport) {
     <app-blog></app-blog>
-  } @placeholder {
+    } @placeholder {
     <div class="section-placeholder" aria-hidden="true"></div>
-  }
+    }
+  </div>
 
-  @defer (on viewport) {
+  <div id="contact">
+    @defer (on viewport) {
     <app-contact></app-contact>
-  } @placeholder {
+    } @placeholder {
     <div class="section-placeholder" aria-hidden="true"></div>
-  }
+    }
+  </div>
+
 </main>
 
 <app-site-footer></app-site-footer>
